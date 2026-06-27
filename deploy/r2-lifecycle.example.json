@@ -1,0 +1,18 @@
+{
+  "rules": [
+    {
+      "id": "expire-daily-backups",
+      "enabled": true,
+      "prefix": "daily/",
+      "action": { "type": "Expire" },
+      "conditions": { "maxAge": 2592000 }
+    },
+    {
+      "id": "expire-weekly-backups",
+      "enabled": true,
+      "prefix": "weekly/",
+      "action": { "type": "Expire" },
+      "conditions": { "maxAge": 31536000 }
+    }
+  ]
+}
