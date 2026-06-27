@@ -1,4 +1,11 @@
 .env
-*.log
+.env.*
 backup.env
 rclone.conf
+*.log
+
+# IDE / OS
+.idea/
+.cursor/
+.DS_Store
+Thumbs.db
