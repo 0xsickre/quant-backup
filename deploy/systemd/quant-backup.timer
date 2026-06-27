@@ -1,0 +1,10 @@
+[Unit]
+Description=Run quant-backup daily at 03:30 UTC (after overnight refreshes)
+
+[Timer]
+OnCalendar=*-*-* 03:30:00 UTC
+Persistent=true
+RandomizedDelaySec=60
+
+[Install]
+WantedBy=timers.target

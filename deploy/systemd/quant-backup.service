@@ -1,0 +1,16 @@
+[Unit]
+Description=quant-backup — daily R2 backup (var/lib, secrets, journal pg_dump)
+Documentation=file:///opt/quant-backup/docs/RESTORE.md
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+User=root
+EnvironmentFile=/etc/quant/backup.env
+ExecStart=/opt/quant-backup/backup-daily.sh
+Nice=10
+TimeoutStartSec=3600
+
+[Install]
+WantedBy=multi-user.target
